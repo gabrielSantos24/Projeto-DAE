@@ -1,5 +1,7 @@
 package dae.projeto.nosso.projetodae.entities;
 
+import dae.projeto.nosso.projetodae.enums.Role;
+import dae.projeto.nosso.projetodae.enums.UserStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
@@ -16,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
 
 public class User {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotNull
@@ -26,5 +28,17 @@ public class User {
     private String password;
 
 
+    @Enumerated(EnumType.STRING)
+    private Role role; // COLABORADOR, RESPONSAVEL, ADMINISTRADOR
+
+    @Enumerated(EnumType.STRING)
+    private UserStatus status; // ATIVO, SUSPENSO
+
+    /*@OneToMany
+    private List<Publication> publications;
+
+    @OneToMany
+    private List<Tag> subscribedTags;
+    */
 
 }
