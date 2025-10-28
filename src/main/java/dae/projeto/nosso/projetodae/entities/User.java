@@ -9,7 +9,7 @@ import jakarta.validation.constraints.NotNull;
 @Table(name = "users")
 @NamedQueries({
         @NamedQuery(
-                name = "getAllSubjects",
+                name = "getAllUsers",
                 query = "SELECT u FROM User u"),
         @NamedQuery(
                 name = "getUserByName",
@@ -34,11 +34,11 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserStatus status; // ATIVO, SUSPENSO
 
-    /*@OneToMany
+    @OneToMany
     private List<Publication> publications;
 
     @OneToMany
     private List<Tag> subscribedTags;
-    */
+
 
 }
