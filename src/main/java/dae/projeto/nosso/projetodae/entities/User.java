@@ -5,6 +5,9 @@ import dae.projeto.nosso.projetodae.enums.UserStatus;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 @NamedQueries({
@@ -17,9 +20,15 @@ import jakarta.validation.constraints.NotNull;
 })
 
 public class User {
+
+    //Nao esta acabado
+    //IDS NAS CLASSES TÊM DE SER LONG COM (L) MAIUSCULO
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
+
+    private String username;
 
     @NotNull
     private String email;
@@ -37,8 +46,8 @@ public class User {
     @OneToMany
     private List<Publication> publications;
 
-    @OneToMany
+    @ManyToMany
     private List<Tag> subscribedTags;
 
-
 }
+
