@@ -2,6 +2,8 @@ package dae.projeto.nosso.projetodae.enums;
 
 public enum Role {
 
+    //esta acabado
+
     /**
      * Colaborador: Investigadores, programadores, estudantes
      * Podem fazer upload, comentar, rating, subscrever tags

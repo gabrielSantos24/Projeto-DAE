@@ -122,6 +122,8 @@ public class Tag implements Serializable {
         this.subscribers = subscribers;
     }
 
+    //metodos auxiliares
+
     public int getPublicationCount() {
         return publications != null ? publications.size() : 0;
     }
