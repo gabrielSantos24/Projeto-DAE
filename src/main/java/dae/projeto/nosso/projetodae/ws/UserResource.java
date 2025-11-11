@@ -26,10 +26,7 @@ public class UserResource {
     @Path("/")
     @RolesAllowed({"COLABORADOR", "RESPONSAVEL", "ADMINISTRADOR"})
     public Response getAllUsers() {
-        List<UserDTO> users = userBean.getAll()
-                .stream()
-                .map(UserDTO::new)
-                .collect(Collectors.toList());
+        List<UserDTO> users = userBean.getAll().stream().map(UserDTO::new).collect(Collectors.toList());
         return Response.ok(users).build();
     }
 
