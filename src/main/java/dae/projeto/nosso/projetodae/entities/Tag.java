@@ -54,16 +54,14 @@ public class Tag implements Serializable {
     public Tag() {
         publications = new ArrayList<>();
         subscribers = new ArrayList<>();
+        this.createdAt = new Date();
     }
 
-    public Tag(long id, String name, boolean visible, User createdBy, Date createdAt) {
+    public Tag(long id, String name, boolean visible, User createdBy) {
         this.id = id;
         this.name = name;
         this.visible = visible;
         this.createdBy = createdBy;
-        this.createdAt = createdAt;
-        this.publications = new ArrayList<>();
-        this.subscribers = new ArrayList<>();
     }
 
     public long getId() {

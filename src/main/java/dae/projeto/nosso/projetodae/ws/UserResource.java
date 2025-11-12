@@ -1,6 +1,7 @@
 package dae.projeto.nosso.projetodae.ws;
 
 import dae.projeto.nosso.projetodae.dtos.UserDTO;
+import dae.projeto.nosso.projetodae.ejb.UserBean;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ejb.EJB;
 import jakarta.ws.rs.Consumes;

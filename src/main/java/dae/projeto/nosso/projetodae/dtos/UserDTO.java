@@ -15,6 +15,9 @@ public class UserDTO {
     public Date createdAt;
     public Date lastLogin;
 
+    public UserDTO() {
+    }
+
     public UserDTO(User u){
         this.id = u.getId();
         this.username = u.getUsername();

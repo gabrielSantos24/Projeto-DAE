@@ -100,6 +100,7 @@ public class User implements Serializable {
         this.notifications = new ArrayList<>();
         this.activities = new ArrayList<>();
         this.status = UserStatus.ACTIVE;
+        this.createdAt = new Date();
     }
 
     public User(String username, String email, String password, Role role) {
@@ -108,7 +109,6 @@ public class User implements Serializable {
         this.email = email;
         this.password = password;
         this.role = role;
-        this.createdAt = new Date();
     }
 
     public Long getId() {
